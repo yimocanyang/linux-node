@@ -1,6 +1,6 @@
 #! /usr/bin/expect
 set user "root"
-set password "123456"
+set password ""
 spawn ssh $user@192.168.137.45
 expect {
 "yes/no" { send "yes\r"; exp_continue}
@@ -8,10 +8,10 @@ expect {
 
 }
 #expect "]*"
-##send "scp /home/co_astomcat/tomcat/bak/wlc-wap.war /home/deploy/\r"
+##send "scp /home/co_astomcat/tomcat/bak/wc-wap.war /home/deploy/\r"
 #send "scp /usr/local/src/redis-4.0.1.tar.gz /home/deploy/\r"
 #expect "]*"
-#send "mv /home/develop/wlc-wap.war /home/develop/wlc-wap-$(date +%Y%m%d).war"
+#send "mv /home/develop/wlc-wap.war /home/develop/wc-wap-$(date +%Y%m%d).war"
 #send "mv /home/deploy/redis-4.0.1.tar.gz /home/develop/wlc-wap-$(date +%Y%m%d).war"
 #expect "]*"
 #send "exit\r"
